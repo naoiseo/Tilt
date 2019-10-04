@@ -35,6 +35,9 @@ var VanillaTilt=function(){"use strict";class t{constructor(e,i={}){if(!(e insta
 				background-position: center center;
 				background-size: 100% 100%;
 				margin: auto;
+				backface-visibility: hidden;
+				transform: translateZ(-100px);
+				
 			}
 			
 			img {
@@ -42,6 +45,9 @@ var VanillaTilt=function(){"use strict";class t{constructor(e,i={}){if(!(e insta
 				z-index: 100 !important;
 				width: 100%;
 				pointer-events: none;
+				transform: translateZ(-100px);
+				backface-visibility: hidden;
+				border: 1px solid red;
 			}
 		</style>
 		
@@ -51,7 +57,7 @@ var VanillaTilt=function(){"use strict";class t{constructor(e,i={}){if(!(e insta
 		
 		<img src="content.png" alt="content" />
 		
-		<div class="element" data-tilt></div>
+		<div class="element" data-tilt data-tilt-full-page-listening></div>
 		
 		<script type="text/javascript">
 
